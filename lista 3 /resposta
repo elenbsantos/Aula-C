@@ -12,7 +12,7 @@ int main() {
     printf("Digite o modo seguro (1/0): ");
     scanf("%d", &modoSeguro);
 
-    // implemente a lógica aqui
+    // implem
 
     return 0;
 }
