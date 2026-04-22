@@ -1,3 +1,5 @@
+dupla: Ingrid e Elen
+
 #include <stdio.h>
 
 int main() {
@@ -12,7 +14,189 @@ int main() {
     printf("Digite o modo seguro (1/0): ");
     scanf("%d", &modoSeguro);
 
-    // implem
+   // implemente a lógica aqui - resposta 1
+
+   if(modeSeguro == 1){ 
+       if (senha == 1){
+       printf("Desbloqueado");
+} else{ 
+    printf("Bloqueado")
+}else { 
+    if(biometria == 1|| senha == 1){
+        printf("Desbloqueado");
+    } else{ 
+        printf("Bloqueado")
+    }
+}
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+#include <stdio.h>
+
+int main() {
+    int tipoUsuario, horario, autorizacao;
+
+    printf("Digite o tipo de usuario (1-aluno, 2-professor): ");
+    scanf("%d", &tipoUsuario);
+
+    printf("Digite o horario atual: ");
+    scanf("%d", &horario);
+
+    printf("Digite a autorizacao especial (1/0): ");
+    scanf("%d", &autorizacao);
+
+    // logica - resposta questao 2
+
+if (tipoUsuario == 2) {
+prinft ("entrada permitida");
+
+else if (tipoUsuario == 1) { 
+if (horario >= 8 && horario <= 18){
+
+ printf("Entrada permitida");
+
+}else{ 
+if ( autorizacao == 1) {
+printf ("Entrada permitida);
+
+} else{ 
+
+printf (" Entrada Negada);
+
+return 0;
+}
+
+
+   
+
+
+
+
+
+
+
+
+
+
+
+
+#include <stdio.h>
+
+int main() {
+    float distancia;
+    int premium, chuva;
+
+    printf("Digite a distancia da entrega: ");
+    scanf("%f", &distancia);
+
+    printf("Cliente premium? (1/0): ");
+    scanf("%d", &premium);
+
+    printf("Esta chovendo? (1/0): ");
+    scanf("%d", &chuva);
+
+    // implemente a lógica aqui- questao 3
+
+if (premium == 1 && distancia <= 20 ){
+printf ("Entrega gratuita");
+
+}else if { (distacia <=10 && chuva == 0) 
+printf ("Entrega normal");
+
+}else {
+printf (" Entrega com taxa ")
+
+
+return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#include <stdio.h>
+
+int main() {
+    int loginOk, dispositivoConhecido, tentativaSuspeita;
+
+    printf("Login correto? (1/0): ");
+    scanf("%d", &loginOk);
+
+    printf("Dispositivo conhecido? (1/0): ");
+    scanf("%d", &dispositivoConhecido);
+
+    printf("Tentativa suspeita? (1/0): ");
+    scanf("%d", &tentativaSuspeita);
+
+    // implemente a lógica aqui - questao 4
+
+if (loginOk == 1)
+{ if ( dispositivoConhecido == 1 && tentativaSuspeita == 0 ) { 
+printf("Liberado");
+
+}else{
+printf("Verificação extra necessaria");
+
+}else{
+printf (" Acesso negado");
+
+
+  return 0;
+}
+
+
+
+
+
+
+
+
+
+
+#include <stdio.h>
+
+int main() {
+    int idade, genero, acompanhado;
+
+    printf("Digite a idade: ");
+    scanf("%d", &idade);
+
+    printf("Digite o genero preferido (1-acao, 2-comedia, 3-terror): ");
+    scanf("%d", &genero);
+
+    printf("Esta acompanhado? (1/0): ");
+    scanf("%d", &acompanhado);
+
+    // implemente a lógica aqui- quetao 5
+
+if ( idade < 18 && genero == 3)
+printf (" Terror não recomendado")
+
+if (idade < 18 && genero == 3)
+printf ("Recomendar normalmente")
+
+else ( generio == 0 && acompanhado ==0)
+printf("recomndar com aviso")
+
 
     return 0;
 }
+
+
