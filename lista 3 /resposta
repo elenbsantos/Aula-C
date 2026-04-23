@@ -1,5 +1,7 @@
 dupla: Ingrid e Elen
 
+Questão 1:
+
 #include <stdio.h>
 
 int main() {
@@ -14,20 +16,24 @@ int main() {
     printf("Digite o modo seguro (1/0): ");
     scanf("%d", &modoSeguro);
 
-   // implemente a lógica aqui - resposta 1
+   // implemente a lógica aqui
 
-   if(modeSeguro == 1){ 
-       if (senha == 1){
-       printf("Desbloqueado");
-} else{ 
-    printf("Bloqueado")
-}else { 
-    if(biometria == 1|| senha == 1){
-        printf("Desbloqueado");
-    } else{ 
-        printf("Bloqueado")
+   if (modoSeguro == 1) {
+   if (senha == 1){
+        printf("\nDesbloqueado\n");
+    }else{  
+        printf("\nBloqueado\n");
     }
-}
+    }else if(modoSeguro == 0){
+    if (biometria == 1 || senha == 1) { 
+        printf("\nDesbloqueado\n");
+    }else{
+        printf("\nBloqueado\n");
+    }
+    }else{ 
+    printf("\nBloqueado\n");
+    }
+   
     return 0;
 }
 
@@ -37,7 +43,7 @@ int main() {
 
 
 
-
+Questão 2 :
 
 #include <stdio.h>
 
@@ -53,7 +59,7 @@ int main() {
     printf("Digite a autorizacao especial (1/0): ");
     scanf("%d", &autorizacao);
 
-    // logica - resposta questao 2
+    // implemente a lógica aqui
 
 if (tipoUsuario == 2) {
 prinft ("entrada permitida");
@@ -81,12 +87,7 @@ return 0;
 
 
 
-
-
-
-
-
-
+Questão 3:
 
 #include <stdio.h>
 
@@ -103,19 +104,18 @@ int main() {
     printf("Esta chovendo? (1/0): ");
     scanf("%d", &chuva);
 
-    // implemente a lógica aqui- questao 3
+    // implemente a lógica aqui
 
-if (premium == 1 && distancia <= 20 ){
-printf ("Entrega gratuita");
+if (premium == 1 && distancia <= 20) {
+        printf("ENTREGA GRATUITA\n");
+    } else {
+        if (distancia <= 10 && chuva == 0)
+            printf("ENTREGA NORMAL\n");
+        else
+            printf("ENTREGA COM TAXA\n");
+    }
 
-}else if { (distacia <=10 && chuva == 0) 
-printf ("Entrega normal");
-
-}else {
-printf (" Entrega com taxa ")
-
-
-return 0;
+    return 0;
 }
 
 
@@ -126,10 +126,7 @@ return 0;
 
 
 
-
-
-
-
+Questão 4:
 
 #include <stdio.h>
 
@@ -145,20 +142,18 @@ int main() {
     printf("Tentativa suspeita? (1/0): ");
     scanf("%d", &tentativaSuspeita);
 
-    // implemente a lógica aqui - questao 4
+    // implemente a lógica aqui
 
-if (loginOk == 1)
-{ if ( dispositivoConhecido == 1 && tentativaSuspeita == 0 ) { 
-printf("Liberado");
+ if (loginOk == 1) {
+        if (dispositivoConhecido == 1 && tentativaSuspeita == 0)
+            printf("ACESSO LIBERADO\n");
+        else
+            printf("VERIFICACAO EXTRA NECESSARIA\n");
+    } else {
+        printf("ACESSO NEGADO\n");
+    }
 
-}else{
-printf("Verificação extra necessaria");
-
-}else{
-printf (" Acesso negado");
-
-
-  return 0;
+    return 0;
 }
 
 
@@ -167,8 +162,7 @@ printf (" Acesso negado");
 
 
 
-
-
+Questão 5:
 
 #include <stdio.h>
 
@@ -186,17 +180,208 @@ int main() {
 
     // implemente a lógica aqui- quetao 5
 
-if ( idade < 18 && genero == 3)
-printf (" Terror não recomendado")
-
-if (idade < 18 && genero == 3)
-printf ("Recomendar normalmente")
-
-else ( generio == 0 && acompanhado ==0)
-printf("recomndar com aviso")
-
+if (idade < 18) {
+        if (genero == 3)
+            printf("TERROR NAO RECOMENDADO\n");
+        else
+            printf("RECOMENDAR NORMALMENTE\n");
+    } else {
+        if (genero == 3 && acompanhado == 0)
+            printf("RECOMENDAR COM AVISO\n");
+        else
+            printf("RECOMENDAR NORMALMENTE\n");
+    }
 
     return 0;
 }
 
 
+
+
+
+
+
+Questão 6:
+
+#include <stdio.h>
+
+int main() {
+    int codigoValido, jaUsouCupom;
+    float valorCompra;
+
+    printf("Codigo valido? (1/0): ");
+    scanf("%d", &codigoValido);
+
+    printf("Digite o valor da compra: ");
+    scanf("%f", &valorCompra);
+
+    printf("Ja usou cupom? (1/0): ");
+    scanf("%d", &jaUsouCupom);
+
+    // implemente a lógica aqui
+
+if (codigoValido == 1) {
+        if (jaUsouCupom == 0 && valorCompra >= 100)
+            printf("DESCONTO APLICADO\n");
+        else
+            printf("CUPOM INVALIDO PARA USO\n");
+    } else {
+        printf("CUPOM INVALIDO\n");
+    }
+
+    return 0;
+}
+
+
+
+
+
+
+
+
+Questão 7:
+
+#include <stdio.h>
+
+int main() {
+    float consumo;
+    int horarioPico, energiaSolar;
+
+    printf("Digite o consumo atual: ");
+    scanf("%f", &consumo);
+
+    printf("Horario de pico? (1/0): ");
+    scanf("%d", &horarioPico);
+
+    printf("Possui energia solar? (1/0): ");
+    scanf("%d", &energiaSolar);
+
+    // implemente a lógica aqui
+
+   if (horarioPico == 1) {
+        if (consumo > 300 && energiaSolar == 0)
+            printf("ALERTA DE ALTO CONSUMO\n");
+        else
+            printf("CONSUMO CONTROLADO\n");
+    } else {
+        if (consumo > 500)
+            printf("ALERTA DE CONSUMO\n");
+        else
+            printf("CONSUMO NORMAL\n");
+    }
+
+    return 0;
+}
+
+
+
+
+
+
+Questão 8:
+
+#include <stdio.h>
+
+int main() {
+    int pessoas, reserva, horario;
+
+    printf("Digite o numero de pessoas: ");
+    scanf("%d", &pessoas);
+
+    printf("Tem reserva? (1/0): ");
+    scanf("%d", &reserva);
+
+    printf("Digite o horario atual: ");
+    scanf("%d", &horario);
+
+    // implemente a lógica aqui
+
+   if (reserva == 1) {
+        printf("ATENDIMENTO IMEDIATO\n");
+    } else {
+        if ((horario >= 12 && horario <= 14) || (horario >= 19 && horario <= 21)) {
+            if (pessoas <= 4)
+                printf("ESPERA CURTA\n");
+            else
+                printf("ESPERA LONGA\n");
+        } else {
+            printf("ATENDIMENTO IMEDIATO\n");
+        }
+    }
+
+    return 0;
+}
+
+
+
+
+
+
+Questão 9:
+
+#include <stdio.h>
+
+int main() {
+    float distancia, valor;
+    int motoristaDisponivel;
+
+    printf("Digite a distancia da corrida: ");
+    scanf("%f", &distancia);
+
+    printf("Digite o valor estimado: ");
+    scanf("%f", &valor);
+
+    printf("Motorista disponivel? (1/0): ");
+    scanf("%d", &motoristaDisponivel);
+
+    // implemente a lógica aqui
+
+    if (motoristaDisponivel == 1) {
+        if (distancia <= 10 || valor >= 30)
+            printf("CORRIDA ACEITA\n");
+        else
+            printf("CORRIDA RECUSADA POR BAIXA RENTABILIDADE\n");
+    } else {
+        printf("SEM MOTORISTAS DISPONIVEIS\n");
+    }
+
+    return 0;
+}
+
+
+
+
+
+
+Questão 10:
+
+#include <stdio.h>
+
+int main() {
+    float cpu, memoria;
+    int erroCritico;
+
+    printf("Digite o uso de CPU: ");
+    scanf("%f", &cpu);
+
+    printf("Digite o uso de memoria: ");
+    scanf("%f", &memoria);
+
+    printf("Ha erro critico? (1/0): ");
+    scanf("%d", &erroCritico);
+
+    // implemente a lógica aqui
+
+  if (erroCritico == 1) {
+        printf("ALERTA MAXIMO\n");
+    } else {
+        if (cpu > 80 && memoria > 80)
+            printf("ALERTA ALTO\n");
+        else if (cpu > 80 || memoria > 80)
+            printf("ALERTA MEDIO\n");
+        else
+            printf("FUNCIONAMENTO NORMAL\n");
+    }
+
+    return 0;
+}
