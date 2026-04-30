@@ -1,0 +1,16 @@
+// leia números até a soma ultrapassar 100.
+#include <stdio.h>
+
+int main() {
+   int numero, soma = 0;
+
+    while (soma <= 100) {
+        printf ("Digite um número: ");
+        scanf ("%d", &numero);
+        
+        soma += numero;
+    }
+        printf("\nA soma ultrapassou 100. Soma final = %d\n", soma);
+    
+    return 0;
+}

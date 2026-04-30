@@ -1,0 +1,27 @@
+// Leia 10 números e conte positivos, negativos e zeros
+#include <stdio.h>
+
+int main() {
+   int i, numero, positivo = 0, negativo = 0, zero = 0;
+
+   for(i = 1; i <= 10; i++){
+   printf("digite o %d° número: ",i);
+   scanf ("%d", &numero);
+   
+   if ( numero > 0) {
+   positivo++;
+   
+  }else if( numero < 0) {
+   negativo++;
+       
+   } else {
+   zero++;
+   }
+   }
+   printf ("\nresultaados\n");
+   printf ("\npositivos: %d\n", positivo);
+   printf ("\nnegativo: %d\n", negativo);
+   printf ("\nzeros: %d\n", zero);
+   
+    return 0;
+}
