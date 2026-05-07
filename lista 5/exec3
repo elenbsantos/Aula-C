@@ -1,0 +1,43 @@
+// Online C compiler to run C program online
+#include <stdio.h>
+
+int main() {
+    int opcao;
+    float saldo = 1000.00, deposito;
+    
+    do {
+        
+        printf ("\nMENU\n");
+        printf ("\n1 - consultar saldo.");
+        printf ("\n2 - depositar.");
+        printf ("\n0 - sair\n");
+        printf ("\nEscolha uma opção: ");
+        scanf ("%d", &opcao);
+        
+        if (opcao == 1){
+            printf ("Saldo:%f\n",saldo);
+            
+        }else if (opcao == 2){
+            printf ("\nDepositar:");
+            scanf ("%f",&deposito);
+            
+            if (deposito > 0){
+                saldo = saldo + deposito;
+                printf ("\nDeposito realizado\n");
+                
+            }else{    
+                printf ("Valor invalido");
+            }
+        }else if (opcao == 0){
+            printf ("Saindo\n");
+        
+            
+        }else{
+            printf ("Opção invalida\n");
+        }
+    }while (opcao!= 0);
+    
+    printf ("Programa encerrado.");
+
+    return 0;
+}
