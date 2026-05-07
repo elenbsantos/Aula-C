@@ -1,0 +1,21 @@
+// Online C compiler to run C program online
+#include <stdio.h>
+
+int main() {
+   int codigo;
+   
+   printf("Digite o codigo de acesso: ");
+   scanf("%d", &codigo);
+   
+   while (codigo != 4321){
+    printf ("\ncodigo incorreto\n");
+   
+    printf ("\nDigite novamente");
+    scanf ("%d", &codigo);
+   }
+   
+   printf("\nAcesso liberado");
+   
+   
+   return 0;
+}
