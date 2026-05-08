@@ -1,0 +1,33 @@
+// Online C compiler to run C program online
+#include <stdio.h>
+
+int main() {
+   float orcamento, produto, total = 0;
+   int quantidadeProdutos = 0;
+   
+   printf ("Digite o orcamento aqui: ");
+   scanf ("%d", &orcamento);
+   
+   while(total <= orcamento){
+       printf ("\nValor do produto: ");
+       scanf ("%d", &produto);
+       
+       if (produto > 0){
+           total = total + produto;
+           quantidadeProdutos++;
+           
+       if (total > orcamento){
+            printf("\nOrcamento ultrapasado\n");
+       }    
+        
+       }else{
+           printf("\nValor invalido");
+          
+       }    
+   }  
+           
+    printf ("\nTotal da compra: %d", total);
+    printf ("\nProdutos validos: %d", quantidadeProdutos);
+   
+    return 0;
+}
