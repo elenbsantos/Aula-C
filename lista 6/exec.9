@@ -1,0 +1,24 @@
+int main() {
+    int vetora[5], vetorb[5], vetorc[5];
+    int pos;
+    
+    printf ("Alimentando o vetor A\n");
+    for (pos = 0; pos < 5; pos++){
+        printf ("Digite o número da posição %d: ", pos);
+        scanf  ("%d", &vetora[pos]);
+    }
+    printf ("\nAlimentando o vetor B\n");
+    for (pos = 0; pos < 5; pos++){
+        printf ("Digite o número da posição %d: ", pos);
+        scanf  ("%d", &vetorb[pos]);
+    }
+    printf ("\nAlimentando o vetor C");
+    for (pos = 0; pos < 5; pos++){ 
+        vetorc[pos] = vetora[pos] + vetorb[pos];
+    }
+    printf ("\nResultado vetor C:\n");
+    for (pos = 0; pos < 5; pos++){ 
+        printf("%d\n", vetorc[pos]);
+    }
+    return 0;
+}
